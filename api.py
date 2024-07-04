@@ -7,9 +7,9 @@ parser = reqparse.RequestParser()
 parser.add_argument('id', type=int)
 
 result={
-    'id_1' : 12,
-    'id_2' : 15,
-    'id_3' : 18
+    'id_1' : 1088,
+    'id_2' : 1093,
+    'id_3' : 1097
 }
 
 class model_knn(Resource):
@@ -22,7 +22,6 @@ class model_knn(Resource):
         print('post: ',args)
         return jsonify({'data': result})
 
- 
 api.add_resource(model_knn, '/model_knn/<int:id>')
 
 if __name__ == '__main__':
